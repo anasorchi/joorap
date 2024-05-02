@@ -1,0 +1,4 @@
+#Thu May 02 17:12:54 WEST 2024
+base.0=C\:\\Users\\anaso\\joor\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

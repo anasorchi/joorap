@@ -1,0 +1,172 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.joor"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml
+10
+11    <!-- Add permissions -->
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:5:5-65
+12-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:5:22-62
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:6:5-81
+13-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:6:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:7:5-80
+14-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:7:22-77
+15
+16    <permission
+16-->[androidx.core:core:1.10.1] C:\Users\anaso\.gradle\caches\transforms-3\889ce5bd12f1117e5357d5fcdb5e1305\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+17        android:name="com.example.joor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.10.1] C:\Users\anaso\.gradle\caches\transforms-3\889ce5bd12f1117e5357d5fcdb5e1305\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.10.1] C:\Users\anaso\.gradle\caches\transforms-3\889ce5bd12f1117e5357d5fcdb5e1305\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.example.joor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Your application configuration -->
+20-->[androidx.core:core:1.10.1] C:\Users\anaso\.gradle\caches\transforms-3\889ce5bd12f1117e5357d5fcdb5e1305\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.10.1] C:\Users\anaso\.gradle\caches\transforms-3\889ce5bd12f1117e5357d5fcdb5e1305\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+21    <application
+22        android:name="android.app.Application"
+22-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:12:9-42
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.10.1] C:\Users\anaso\.gradle\caches\transforms-3\889ce5bd12f1117e5357d5fcdb5e1305\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:13:9-43
+25        android:label="Your App Name" >
+25-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:11:9-38
+26
+27        <!-- Your activity configuration -->
+28        <activity
+28-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:16:9-31:20
+29            android:name="com.example.joor.MainActivity"
+29-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:17:13-41
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+30-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:21:13-163
+31            android:exported="true"
+31-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:18:13-36
+32            android:hardwareAccelerated="true"
+32-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:22:13-47
+33            android:launchMode="singleTop"
+33-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:19:13-43
+34            android:theme="@style/LaunchTheme"
+34-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:20:13-47
+35            android:windowSoftInputMode="adjustResize" >
+35-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:23:13-55
+36
+37            <!-- Intent filters for main activity -->
+38            <intent-filter>
+38-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:26:13-29:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:27:17-68
+39-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:27:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:28:17-76
+41-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:28:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <!--
+46             Don't delete the meta-data below.
+47             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+48        -->
+49        <meta-data
+49-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:35:9-37:33
+50            android:name="flutterEmbedding"
+50-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:36:13-44
+51            android:value="2" />
+51-->C:\Users\anaso\joor\android\app\src\main\AndroidManifest.xml:37:13-30
+52
+53        <provider
+53-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+54            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+54-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-82
+55            android:authorities="com.example.joor.flutter.image_provider"
+55-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-74
+56            android:exported="false"
+56-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+57            android:grantUriPermissions="true" >
+57-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+58            <meta-data
+58-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-17:75
+59                android:name="android.support.FILE_PROVIDER_PATHS"
+59-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:17-67
+60                android:resource="@xml/flutter_image_picker_file_paths" />
+60-->[:image_picker_android] C:\Users\anaso\joor\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-72
+61        </provider>
+62
+63        <uses-library
+63-->[androidx.window:window:1.0.0-beta04] C:\Users\anaso\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+64            android:name="androidx.window.extensions"
+64-->[androidx.window:window:1.0.0-beta04] C:\Users\anaso\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+65            android:required="false" />
+65-->[androidx.window:window:1.0.0-beta04] C:\Users\anaso\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+66        <uses-library
+66-->[androidx.window:window:1.0.0-beta04] C:\Users\anaso\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+67            android:name="androidx.window.sidecar"
+67-->[androidx.window:window:1.0.0-beta04] C:\Users\anaso\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+68            android:required="false" />
+68-->[androidx.window:window:1.0.0-beta04] C:\Users\anaso\.gradle\caches\transforms-3\076eb9235982ee06112d76594ea8585f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+69
+70        <provider
+70-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+72            android:authorities="com.example.joor.androidx-startup"
+72-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+73            android:exported="false" >
+73-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+74            <meta-data
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+76                android:value="androidx.startup" />
+76-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+77        </provider>
+78
+79        <receiver
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+80            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+81            android:directBootAware="false"
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+82            android:enabled="true"
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+83            android:exported="true"
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+84            android:permission="android.permission.DUMP" >
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+85            <intent-filter>
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+86                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+87            </intent-filter>
+88            <intent-filter>
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+89                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+90            </intent-filter>
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+92                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+93            </intent-filter>
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+95                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\anaso\.gradle\caches\transforms-3\b92cbf7d134b1c7f58467c023b6e5f48\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+96            </intent-filter>
+97        </receiver>
+98    </application>
+99
+100</manifest>
