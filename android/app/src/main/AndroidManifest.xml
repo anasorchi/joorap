@@ -8,7 +8,7 @@
 
     <!-- Your application configuration -->
     <application
-        android:label="Your App Name"
+        android:label="Joor"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

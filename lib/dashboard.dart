@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'product.dart';
 import 'admin.dart';
 import 'client.dart';
+import 'logout.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -50,7 +51,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 color: Colors.blue,
               ),
               child: Text(
-                'Menu',
+                'JOOR Menu',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -87,6 +88,18 @@ class _DashboardPageState extends State<DashboardPage> {
                 );
               },
             ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          LogoutPage()), // Navigate to LogoutPage
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -118,17 +131,20 @@ class _DashboardPageState extends State<DashboardPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         StatisticWidget(
-                            icon: Icons.calendar_today,
-                            value: data['totalOrders'].toString(),
-                            label: 'New Orders'),
+                          icon: Icons.calendar_today,
+                          value: data['totalOrders'].toString(),
+                          label: 'New Orders',
+                        ),
                         StatisticWidget(
-                            icon: Icons.group,
-                            value: data['totalUsers'].toString(),
-                            label: 'Visitors'),
+                          icon: Icons.group,
+                          value: data['totalUsers'].toString(),
+                          label: 'Visitors',
+                        ),
                         StatisticWidget(
-                            icon: Icons.attach_money,
-                            value: data['totalProfit'].toString(),
-                            label: 'Total Profit'),
+                          icon: Icons.attach_money,
+                          value: data['totalProfit'].toString(),
+                          label: 'Total Profit',
+                        ),
                       ],
                     ),
                   ),
@@ -182,15 +198,21 @@ class StatisticWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(icon, size: 40),
-        SizedBox(height: 8),
-        Text(value,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-        SizedBox(height: 4),
-        Text(label),
-      ],
+    return Card(
+      elevation: 4,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Icon(icon, size: 40),
+            SizedBox(height: 8),
+            Text(value,
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            SizedBox(height: 4),
+            Text(label),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -202,19 +224,19 @@ class OrderItemWidget extends StatelessWidget {
   final String date;
   final String price;
 
-  const OrderItemWidget({
-    Key? key,
-    required this.orderId,
-    required this.customerName,
-    required this.customerEmail,
-    required this.date,
-    required this.price,
-  }) : super(key: key);
+  const OrderItemWidget(
+      {Key? key,
+      required this.orderId,
+      required this.customerName,
+      required this.customerEmail,
+      required this.date,
+      required this.price})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      elevation: 4,
       child: ListTile(
         title: Text('Order ID: $orderId'),
         subtitle: Column(

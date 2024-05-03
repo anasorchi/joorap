@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'confirm.dart';
 
 class AddProductPage extends StatefulWidget {
@@ -12,10 +10,10 @@ class _AddProductPageState extends State<AddProductPage> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _nameController = TextEditingController();
   TextEditingController _priceController = TextEditingController();
-  TextEditingController _profitController = TextEditingController();
   TextEditingController _descriptionController = TextEditingController();
   TextEditingController _originalPriceController = TextEditingController();
   TextEditingController _quantityController = TextEditingController();
+  String _selectedCategory = 'homme'; // Default category
 
   @override
   Widget build(BuildContext context) {
@@ -52,17 +50,6 @@ class _AddProductPageState extends State<AddProductPage> {
                 },
               ),
               TextFormField(
-                controller: _profitController,
-                decoration: InputDecoration(labelText: 'Profit'),
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter profit';
-                  }
-                  return null;
-                },
-              ),
-              TextFormField(
                 controller: _descriptionController,
                 decoration: InputDecoration(labelText: 'Description'),
               ),
@@ -89,6 +76,34 @@ class _AddProductPageState extends State<AddProductPage> {
                 },
               ),
               SizedBox(height: 20),
+              // Dropdown select for category
+              DropdownButtonFormField<String>(
+                value: _selectedCategory,
+                onChanged: (value) {
+                  setState(() {
+                    _selectedCategory = value!;
+                  });
+                },
+                items: <String>['homme', 'femme', 'enfant']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Row(
+                      children: [
+                        Icon(Icons.category), // Add appropriate icons here
+                        SizedBox(width: 10),
+                        Text(value),
+                      ],
+                    ),
+                  );
+                }).toList(),
+                decoration: InputDecoration(
+                  labelText: 'Category',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _submitForm,
                 child: Text('Submit'),
@@ -106,10 +121,11 @@ class _AddProductPageState extends State<AddProductPage> {
       Map<String, dynamic> productData = {
         'name': _nameController.text,
         'price': double.parse(_priceController.text),
-        'profit': double.parse(_profitController.text),
         'description': _descriptionController.text,
         'originalPrice': double.parse(_originalPriceController.text),
         'quantity': int.parse(_quantityController.text),
+        'category': _selectedCategory,
+        // 'image': _image,  // Remove image from product data
       };
 
       // Navigate to ConfirmPage and pass the product data
@@ -126,7 +142,6 @@ class _AddProductPageState extends State<AddProductPage> {
   void dispose() {
     _nameController.dispose();
     _priceController.dispose();
-    _profitController.dispose();
     _descriptionController.dispose();
     _originalPriceController.dispose();
     _quantityController.dispose();
